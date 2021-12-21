@@ -7,7 +7,6 @@ import 'package:alice/ui/widget/alice_call_overview_widget.dart';
 import 'package:alice/ui/widget/alice_call_request_widget.dart';
 import 'package:alice/ui/widget/alice_call_response_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:share/share.dart';
 
 class AliceCallDetailsScreen extends StatefulWidget {
   final AliceHttpCall call;
@@ -65,8 +64,8 @@ class _AliceCallDetailsScreenState extends State<AliceCallDetailsScreen>
           backgroundColor: AliceConstants.lightRed,
           key: Key('share_key'),
           onPressed: () async {
-            Share.share(await _getSharableResponseString(),
-                subject: 'Request Details');
+            // Share.share(await _getSharableResponseString(),
+            //     subject: 'Request Details');
           },
           child: Icon(Icons.share),
         ),
